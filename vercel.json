@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
+    {
+      "src": "/zohoverify/(.*)",
+      "dest": "/zohoverify/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
