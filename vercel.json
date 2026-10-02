@@ -1,19 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/partner", "destination": "/partner.html" },
+    { "source": "/privacy", "destination": "/privacy.html" }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/zohoverify/(.*)",
-      "dest": "/zohoverify/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
     }
   ]
 }
