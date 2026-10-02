@@ -12,7 +12,7 @@ Static site for Kyndly Health. Pure HTML/CSS/JS, no build step, hosted on Vercel
 | `/privacy` | `privacy.html` |
 | (any missing URL) | `404.html` |
 
-Shared styles and scripts live in `assets/site.css` and `assets/site.js`. The clean URLs are set up as rewrites in `vercel.json`. `zohoverify/` holds Zoho Mail's domain-verification file — leave it in place.
+Favicon files (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`) sit at the repo root; the `<link>` tags are in each page head. Shared styles and scripts live in `assets/site.css` and `assets/site.js`. The clean URLs are set up as rewrites in `vercel.json`. `zohoverify/` holds Zoho Mail's domain-verification file — leave it in place.
 
 The site has **no forms** and collects no personal data. All contact is by email to hello@gokyndly.com. If a form, analytics or online ordering is added, update `privacy.html` first.
 
